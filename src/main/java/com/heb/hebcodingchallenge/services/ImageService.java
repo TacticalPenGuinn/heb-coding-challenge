@@ -95,7 +95,7 @@ public class ImageService {
 
         imageToInsert = associateKnownObjects(imageToInsert);
 
-        imageToInsert.setSourceImageLocation(uploadImageToFolder(tempImage, multipartFile.getName()).toString());
+        imageToInsert.setSourceImageLocation(uploadImageToFolder(tempImage, multipartFile.getOriginalFilename()).toString());
 
         return imageRepository.save(imageToInsert);
 
